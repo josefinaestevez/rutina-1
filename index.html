@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rutina 1 — Día 1</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-top: 2px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    .note {
+      background: #fffbe6;
+      border-left: 3px solid #f0c040;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* ── Exercise card ── */
+    .card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+
+    @media (max-width: 640px) {
+      .card { grid-template-columns: 1fr; }
+      header { padding: 16px; }
+      header h2 { font-size: 1.5rem; }
+    }
+
+    .card-video {
+      position: relative;
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+
+    .card-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .card-info {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .card-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .card-sets {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f0f0;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #555;
+      width: fit-content;
+    }
+
+    .card-note {
+      font-size: 0.8rem;
+      color: #999;
+      line-height: 1.4;
+    }
+
+    /* ── Hollow special card (no video) ── */
+    .card-timer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 24px;
+      font-size: 0.85rem;
+      color: #666;
+      grid-column: 1 / -1;
+    }
+
+    .card-timer .icon { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rutina 1</h1>
+  <h2>Día 1</h2>
+</header>
+
+<main>
+
+  <div class="note">
+    Realizar respiración con el diafragma y activar los dorsales principalmente en sentadillas y ejercicios que exijan gran estabilidad de core. Dejar 1–2 repeticiones en reserva.
+  </div>
+
+  <!-- ── MOVILIDAD ── -->
+  <div class="section-title">Movilidad</div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/dSf4oPTbZS4" allowfullscreen loading="lazy" title="Rechazo Escapular en Cuadrupedia"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Contracción escapular en cuadrupédia baja</div>
+      <div class="card-sets">Movilidad</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/hQCvIKrhzM4" allowfullscreen loading="lazy" title="Rotación torácica tumbado de lado"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Rotación tumbada de lado</div>
+      <div class="card-sets">Movilidad</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/SUUNRzzmokE" allowfullscreen loading="lazy" title="Dorsiflexión tobillo"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Dorsiflexión</div>
+      <div class="card-sets">Movilidad</div>
+    </div>
+  </div>
+
+  <!-- ── ACTIVACIÓN ── -->
+  <div class="section-title">Activación</div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/CYTVx2RKDNI" allowfullscreen loading="lazy" title="Hollow Body"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Hollow</div>
+      <div class="card-sets">2 × max</div>
+      <div class="card-note">Anotar el tiempo de cada serie.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/vxaPBQdVaQg" allowfullscreen loading="lazy" title="Superman ejercicio espalda"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Superman</div>
+      <div class="card-sets">2 × 8</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/8pzs8L7cAAs" allowfullscreen loading="lazy" title="Clamshell ejercicio cadera"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Clamshell</div>
+      <div class="card-sets">2 × 10</div>
+    </div>
+  </div>
+
+  <!-- ── BLOQUE ── -->
+  <div class="section-title">Bloque principal</div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/BjixzWEw4EY" allowfullscreen loading="lazy" title="Sentadillas tutorial"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Sentadillas</div>
+      <div class="card-sets">4 × 8</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/btw83p9ffTU" allowfullscreen loading="lazy" title="Sillón femoral tutorial"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Sillón femoral</div>
+      <div class="card-sets">3 × 12</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/cV9ylFjgJtI" allowfullscreen loading="lazy" title="Patada de glúteo en polea"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Patada de glúteo en polea</div>
+      <div class="card-sets">3 × 10</div>
+      <div class="card-note">Si la polea está ocupada, usar la máquina.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/NohHN2_GUz4" allowfullscreen loading="lazy" title="Gemelos a 1 pie"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Gemelos a 1 pie</div>
+      <div class="card-sets">2 × 12</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/IJUL0Gz7PvU" allowfullscreen loading="lazy" title="Polea alta a 1 brazo"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Polea alta a 1 brazo</div>
+      <div class="card-sets">3 × 10</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/duJvtG1qIko" allowfullscreen loading="lazy" title="Remo polea baja"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Remo polea baja</div>
+      <div class="card-sets">3 × 10</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/aTVwn3QgcVk" allowfullscreen loading="lazy" title="Press de hombros sentada con mancuernas"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Press de hombros sentada con mancuernas</div>
+      <div class="card-sets">3 × 8</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-video">
+      <iframe src="https://www.youtube.com/embed/kLbvYQ-l4BA" allowfullscreen loading="lazy" title="Vuelo frontal"></iframe>
+    </div>
+    <div class="card-info">
+      <div class="card-name">Vuelo frontal</div>
+      <div class="card-sets">3 × 10</div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
