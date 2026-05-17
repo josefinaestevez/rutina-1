@@ -55,7 +55,6 @@
       line-height: 1.5;
     }
 
-    /* ── Section titles ── */
     .section-title {
       font-size: 0.75rem;
       font-weight: 700;
@@ -67,7 +66,6 @@
       border-bottom: 1px solid #e5e5e5;
     }
 
-    /* ── Exercise card ── */
     .card {
       background: #fff;
       border: 1px solid #e5e5e5;
@@ -84,17 +82,46 @@
       header h2 { font-size: 1.5rem; }
     }
 
+    /* ── Thumbnail / video area ── */
     .card-video {
       position: relative;
       background: #000;
       aspect-ratio: 16/9;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .card-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .card-video:hover img { opacity: 0.85; }
+
+    .play-btn {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .play-btn svg {
+      width: 56px;
+      height: 56px;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
     }
 
     .card-video iframe {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       border: none;
-      display: block;
     }
 
     .card-info {
@@ -102,7 +129,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .card-name {
@@ -114,7 +141,6 @@
     .card-sets {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
       background: #f0f0f0;
       padding: 4px 10px;
       border-radius: 999px;
@@ -130,18 +156,16 @@
       line-height: 1.4;
     }
 
-    /* ── Hollow special card (no video) ── */
-    .card-timer {
-      display: flex;
+    .yt-link {
+      font-size: 0.78rem;
+      color: #c00;
+      text-decoration: none;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 20px 24px;
-      font-size: 0.85rem;
-      color: #666;
-      grid-column: 1 / -1;
+      gap: 4px;
+      width: fit-content;
     }
-
-    .card-timer .icon { font-size: 1.5rem; }
+    .yt-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -161,32 +185,38 @@
   <div class="section-title">Movilidad</div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/dSf4oPTbZS4" allowfullscreen loading="lazy" title="Rechazo Escapular en Cuadrupedia"></iframe>
+    <div class="card-video" data-vid="dSf4oPTbZS4">
+      <img src="https://img.youtube.com/vi/dSf4oPTbZS4/hqdefault.jpg" alt="Contracción escapular en cuadrupedia" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Contracción escapular en cuadrupédia baja</div>
       <div class="card-sets">Movilidad</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=dSf4oPTbZS4" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/hQCvIKrhzM4" allowfullscreen loading="lazy" title="Rotación torácica tumbado de lado"></iframe>
+    <div class="card-video" data-vid="hQCvIKrhzM4">
+      <img src="https://img.youtube.com/vi/hQCvIKrhzM4/hqdefault.jpg" alt="Rotación tumbada de lado" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Rotación tumbada de lado</div>
       <div class="card-sets">Movilidad</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=hQCvIKrhzM4" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/SUUNRzzmokE" allowfullscreen loading="lazy" title="Dorsiflexión tobillo"></iframe>
+    <div class="card-video" data-vid="SUUNRzzmokE">
+      <img src="https://img.youtube.com/vi/SUUNRzzmokE/hqdefault.jpg" alt="Dorsiflexión tobillo" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Dorsiflexión</div>
       <div class="card-sets">Movilidad</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=SUUNRzzmokE" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
@@ -194,33 +224,39 @@
   <div class="section-title">Activación</div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/CYTVx2RKDNI" allowfullscreen loading="lazy" title="Hollow Body"></iframe>
+    <div class="card-video" data-vid="CYTVx2RKDNI">
+      <img src="https://img.youtube.com/vi/CYTVx2RKDNI/hqdefault.jpg" alt="Hollow Body" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Hollow</div>
       <div class="card-sets">2 × max</div>
       <div class="card-note">Anotar el tiempo de cada serie.</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=CYTVx2RKDNI" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/vxaPBQdVaQg" allowfullscreen loading="lazy" title="Superman ejercicio espalda"></iframe>
+    <div class="card-video" data-vid="vxaPBQdVaQg">
+      <img src="https://img.youtube.com/vi/vxaPBQdVaQg/hqdefault.jpg" alt="Superman ejercicio" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Superman</div>
       <div class="card-sets">2 × 8</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=vxaPBQdVaQg" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/8pzs8L7cAAs" allowfullscreen loading="lazy" title="Clamshell ejercicio cadera"></iframe>
+    <div class="card-video" data-vid="8pzs8L7cAAs">
+      <img src="https://img.youtube.com/vi/8pzs8L7cAAs/hqdefault.jpg" alt="Clamshell" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Clamshell</div>
       <div class="card-sets">2 × 10</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=8pzs8L7cAAs" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
@@ -228,87 +264,117 @@
   <div class="section-title">Bloque principal</div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/BjixzWEw4EY" allowfullscreen loading="lazy" title="Sentadillas tutorial"></iframe>
+    <div class="card-video" data-vid="BjixzWEw4EY">
+      <img src="https://img.youtube.com/vi/BjixzWEw4EY/hqdefault.jpg" alt="Sentadillas" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Sentadillas</div>
       <div class="card-sets">4 × 8</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=BjixzWEw4EY" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/btw83p9ffTU" allowfullscreen loading="lazy" title="Sillón femoral tutorial"></iframe>
+    <div class="card-video" data-vid="btw83p9ffTU">
+      <img src="https://img.youtube.com/vi/btw83p9ffTU/hqdefault.jpg" alt="Sillón femoral" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Sillón femoral</div>
       <div class="card-sets">3 × 12</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=btw83p9ffTU" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/cV9ylFjgJtI" allowfullscreen loading="lazy" title="Patada de glúteo en polea"></iframe>
+    <div class="card-video" data-vid="cV9ylFjgJtI">
+      <img src="https://img.youtube.com/vi/cV9ylFjgJtI/hqdefault.jpg" alt="Patada de glúteo en polea" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Patada de glúteo en polea</div>
       <div class="card-sets">3 × 10</div>
       <div class="card-note">Si la polea está ocupada, usar la máquina.</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=cV9ylFjgJtI" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/NohHN2_GUz4" allowfullscreen loading="lazy" title="Gemelos a 1 pie"></iframe>
+    <div class="card-video" data-vid="NohHN2_GUz4">
+      <img src="https://img.youtube.com/vi/NohHN2_GUz4/hqdefault.jpg" alt="Gemelos a 1 pie" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Gemelos a 1 pie</div>
       <div class="card-sets">2 × 12</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=NohHN2_GUz4" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/IJUL0Gz7PvU" allowfullscreen loading="lazy" title="Polea alta a 1 brazo"></iframe>
+    <div class="card-video" data-vid="IJUL0Gz7PvU">
+      <img src="https://img.youtube.com/vi/IJUL0Gz7PvU/hqdefault.jpg" alt="Polea alta a 1 brazo" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Polea alta a 1 brazo</div>
       <div class="card-sets">3 × 10</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=IJUL0Gz7PvU" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/duJvtG1qIko" allowfullscreen loading="lazy" title="Remo polea baja"></iframe>
+    <div class="card-video" data-vid="duJvtG1qIko">
+      <img src="https://img.youtube.com/vi/duJvtG1qIko/hqdefault.jpg" alt="Remo polea baja" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Remo polea baja</div>
       <div class="card-sets">3 × 10</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=duJvtG1qIko" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/aTVwn3QgcVk" allowfullscreen loading="lazy" title="Press de hombros sentada con mancuernas"></iframe>
+    <div class="card-video" data-vid="aTVwn3QgcVk">
+      <img src="https://img.youtube.com/vi/aTVwn3QgcVk/hqdefault.jpg" alt="Press de hombros sentada con mancuernas" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Press de hombros sentada con mancuernas</div>
       <div class="card-sets">3 × 8</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=aTVwn3QgcVk" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-video">
-      <iframe src="https://www.youtube.com/embed/kLbvYQ-l4BA" allowfullscreen loading="lazy" title="Vuelo frontal"></iframe>
+    <div class="card-video" data-vid="kLbvYQ-l4BA">
+      <img src="https://img.youtube.com/vi/kLbvYQ-l4BA/hqdefault.jpg" alt="Vuelo frontal" />
+      <div class="play-btn"><svg viewBox="0 0 68 48"><path fill="#ff0000" d="M66.5 7.8A8.5 8.5 0 0 0 60.7 2C55.4.5 34 .5 34 .5S12.6.5 7.3 2A8.5 8.5 0 0 0 1.5 7.8C0 13.1 0 24 0 24s0 10.9 1.5 16.2A8.5 8.5 0 0 0 7.3 46c5.3 1.5 26.7 1.5 26.7 1.5s21.4 0 26.7-1.5a8.5 8.5 0 0 0 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.2z"/><path fill="#fff" d="M27 34l18-10-18-10v20z"/></svg></div>
     </div>
     <div class="card-info">
       <div class="card-name">Vuelo frontal</div>
       <div class="card-sets">3 × 10</div>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=kLbvYQ-l4BA" target="_blank">Ver en YouTube ↗</a>
     </div>
   </div>
 
 </main>
+
+<script>
+  document.querySelectorAll('.card-video[data-vid]').forEach(el => {
+    el.addEventListener('click', () => {
+      const vid = el.dataset.vid;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=1`;
+      iframe.allow = 'autoplay; encrypted-media';
+      iframe.allowFullscreen = true;
+      el.innerHTML = '';
+      el.appendChild(iframe);
+    });
+  });
+</script>
 
 </body>
 </html>
