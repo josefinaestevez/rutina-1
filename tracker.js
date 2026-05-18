@@ -10,8 +10,12 @@
   function loadWeek(week) {
     document.querySelectorAll('.card[data-ex]').forEach(card => {
       const data = JSON.parse(localStorage.getItem(storageKey(week, card.dataset.ex)) || '{}');
-      card.querySelector('.track-peso').value = data.peso || '';
-      card.querySelector('.track-notas').value = data.notas || '';
+      const pesoEl = card.querySelector('.track-peso');
+      const notasEl = card.querySelector('.track-notas');
+      const fieldsEl = card.querySelector('.track-fields');
+      pesoEl.textContent = data.peso ? `${data.peso} kg` : '';
+      notasEl.textContent = data.notas || '';
+      fieldsEl.style.display = (data.peso || data.notas) ? '' : 'none';
     });
   }
 
@@ -28,24 +32,6 @@
       localStorage.setItem('r1_week', currentWeek);
       syncNav(currentWeek);
       loadWeek(currentWeek);
-    });
-  });
-
-  document.querySelectorAll('.card[data-ex]').forEach(card => {
-    const slug = card.dataset.ex;
-
-    card.querySelector('.track-peso').addEventListener('input', e => {
-      const k = storageKey(currentWeek, slug);
-      const data = JSON.parse(localStorage.getItem(k) || '{}');
-      data.peso = e.target.value;
-      localStorage.setItem(k, JSON.stringify(data));
-    });
-
-    card.querySelector('.track-notas').addEventListener('input', e => {
-      const k = storageKey(currentWeek, slug);
-      const data = JSON.parse(localStorage.getItem(k) || '{}');
-      data.notas = e.target.value;
-      localStorage.setItem(k, JSON.stringify(data));
     });
   });
 

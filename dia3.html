@@ -240,36 +240,27 @@
 
     .track-fields {
       display: flex;
-      gap: 8px;
-      padding-top: 10px;
+      gap: 10px;
+      padding-top: 8px;
       border-top: 1px solid #f0f0f0;
       margin-top: 2px;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
 
-    .track-peso,
-    .track-notas {
-      padding: 5px 8px;
-      border: 1px solid #e5e5e5;
-      border-radius: 6px;
+    .track-peso {
       font-size: 0.78rem;
+      font-weight: 600;
       color: #1a1a1a;
-      background: #fafafa;
-      font-family: inherit;
-      transition: border-color 0.15s, background 0.15s;
+      white-space: nowrap;
     }
 
-    .track-peso { width: 90px; min-width: 0; }
-    .track-notas { flex: 1; min-width: 0; }
-
-    .track-peso:focus,
-    .track-notas:focus {
-      outline: none;
-      border-color: #bbb;
-      background: #fff;
+    .track-notas {
+      font-size: 0.78rem;
+      color: #888;
+      line-height: 1.45;
+      flex: 1;
     }
-
-    .track-peso::placeholder,
-    .track-notas::placeholder { color: #ccc; }
   </style>
 </head>
 <body data-day="3">
@@ -317,8 +308,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=Tsa6omWLEx8" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -333,8 +324,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=6zJLmYKuCgk" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -349,8 +340,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=adRzu0Vz37s" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -365,8 +356,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=WCqxfu4G-wI" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -384,8 +375,8 @@
       <div class="card-sets">3 × 12</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=lCeRh2n0hTw" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -400,8 +391,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=0JFVLaTLzHg" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -416,8 +407,8 @@
       <div class="card-sets">2 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=Ft6PTNY8zwM" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -435,8 +426,8 @@
       <div class="card-sets">3 × 8</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=VNpkYdex6Yc" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -452,8 +443,8 @@
       <div class="card-note">Se puede combinar con el primer ejercicio.</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=EptZC_AY6fE" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -468,8 +459,8 @@
       <div class="card-sets">3 × 8</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=HuulIq7y_zI" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -484,8 +475,8 @@
       <div class="card-sets">3 × 12</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=tAnAP9iILlE" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -500,8 +491,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=WW6E1zRdYoQ" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -516,8 +507,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=tWTQYe5WXzQ" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -532,8 +523,8 @@
       <div class="card-sets">3 × 12</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=Q18p2QtQAes" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -552,8 +543,8 @@
       <div class="card-note">Intercalar 1' al 70% de intensidad y 1' al 50%.</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=ev7vs813Bxo" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>

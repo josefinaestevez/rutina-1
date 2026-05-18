@@ -240,36 +240,27 @@
 
     .track-fields {
       display: flex;
-      gap: 8px;
-      padding-top: 10px;
+      gap: 10px;
+      padding-top: 8px;
       border-top: 1px solid #f0f0f0;
       margin-top: 2px;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
 
-    .track-peso,
-    .track-notas {
-      padding: 5px 8px;
-      border: 1px solid #e5e5e5;
-      border-radius: 6px;
+    .track-peso {
       font-size: 0.78rem;
+      font-weight: 600;
       color: #1a1a1a;
-      background: #fafafa;
-      font-family: inherit;
-      transition: border-color 0.15s, background 0.15s;
+      white-space: nowrap;
     }
 
-    .track-peso { width: 90px; min-width: 0; }
-    .track-notas { flex: 1; min-width: 0; }
-
-    .track-peso:focus,
-    .track-notas:focus {
-      outline: none;
-      border-color: #bbb;
-      background: #fff;
+    .track-notas {
+      font-size: 0.78rem;
+      color: #888;
+      line-height: 1.45;
+      flex: 1;
     }
-
-    .track-peso::placeholder,
-    .track-notas::placeholder { color: #ccc; }
 
     .lightbox {
       display: none;
@@ -338,8 +329,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=dSf4oPTbZS4" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -354,8 +345,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=hQCvIKrhzM4" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -370,8 +361,8 @@
       <div class="card-sets">Movilidad</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=SUUNRzzmokE" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -390,8 +381,8 @@
       <div class="card-note">Anotar el tiempo de cada serie.</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=CYTVx2RKDNI" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -404,8 +395,8 @@
       <div class="card-name">Superman</div>
       <div class="card-sets">2 × 8</div>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -420,8 +411,8 @@
       <div class="card-sets">2 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=yEKxclDIt1A" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -439,8 +430,8 @@
       <div class="card-sets">4 × 8</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=qsAkuNORgmk" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -455,8 +446,8 @@
       <div class="card-sets">3 × 12</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=btw83p9ffTU" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -472,8 +463,8 @@
       <div class="card-note">Si la polea está ocupada, usar la máquina.</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=cV9ylFjgJtI" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -488,8 +479,8 @@
       <div class="card-sets">2 × 12</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=NohHN2_GUz4" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -504,8 +495,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=IJUL0Gz7PvU" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -520,8 +511,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=duJvtG1qIko" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -536,8 +527,8 @@
       <div class="card-sets">3 × 8</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=aTVwn3QgcVk" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -552,8 +543,8 @@
       <div class="card-sets">3 × 10</div>
       <a class="yt-link" href="https://www.youtube.com/watch?v=kLbvYQ-l4BA" target="_blank">Ver en YouTube ↗</a>
       <div class="track-fields">
-        <input class="track-peso" type="text" placeholder="Peso" />
-        <input class="track-notas" type="text" placeholder="Notas" />
+        <span class="track-peso"></span>
+        <span class="track-notas"></span>
       </div>
     </div>
   </div>
@@ -581,12 +572,12 @@
   // Seed Día 1 / Semana 1
   [
     ['hollow',           '',     '20 seg'],
-    ['sentadillas',      '12.5', 'podría haber hecho más repes en cada serie creo'],
+    ['sentadillas',      '12.5', 'podría haber hecho más repes en cada serie creo, la próxima pruebo con más'],
     ['sillon-femoral',   '9',    '9 era el peso menor, pero no llegué a las 12 repeticiones'],
     ['patada-gluteo',    '11',   ''],
     ['gemelos-1pie',     '12.5', ''],
-    ['polea-alta-1brazo','6',    'podría más pero 9 es el siguiente y es mucho'],
-    ['remo-polea-baja',  '15',   'puedo más pero el que sigue es 22 y es mucho'],
+    ['polea-alta-1brazo','6',    'podría más, pero 9 es el siguiente y es mucho'],
+    ['remo-polea-baja',  '15',   'podría más, pero 22 es el siguiente y es mucho'],
     ['press-hombros',    '6',    ''],
     ['vuelo-frontal',    '3',    ''],
   ].forEach(([slug, peso, notas]) => {
