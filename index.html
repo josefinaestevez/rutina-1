@@ -569,21 +569,6 @@
   });
 </script>
 <script>
-  // Seed Día 1 / Semana 1
-  [
-    ['hollow',           '',     '20 seg'],
-    ['sentadillas',      '12.5', 'podría haber hecho más repes en cada serie creo, la próxima pruebo con más'],
-    ['sillon-femoral',   '9',    '9 era el peso menor, pero no llegué a las 12 repeticiones'],
-    ['patada-gluteo',    '11',   ''],
-    ['gemelos-1pie',     '12.5', ''],
-    ['polea-alta-1brazo','6',    'podría más, pero 9 es el siguiente y es mucho'],
-    ['remo-polea-baja',  '15',   'podría más, pero 22 es el siguiente y es mucho'],
-    ['press-hombros',    '6',    ''],
-    ['vuelo-frontal',    '3',    ''],
-  ].forEach(([slug, peso, notas]) => {
-    localStorage.setItem(`r1_d1_s1_${slug}`, JSON.stringify({ peso, notas }));
-  });
-
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
 
@@ -600,7 +585,8 @@
     if (e.key === 'Escape') lightbox.classList.remove('open');
   });
 </script>
-<script src="tracker.js?v=2"></script>
+<script src="data.js"></script>
+<script src="tracker.js?v=3"></script>
 
 </body>
 </html>
